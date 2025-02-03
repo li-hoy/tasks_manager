@@ -1,0 +1,93 @@
+root {
+    font-size: 14px;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+    min-width: 720px;
+    margin: 0;
+    padding: 0;
+}
+
+.panel {
+    display: flex;
+    justify-content: space-between;
+    padding: .5em;
+}
+
+.panel.panel-list {
+    flex-flow: column nowrap;
+}
+
+.panel.panel-list > * + * {
+    margin-top: 1em;
+}
+
+.task {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    background-color:aliceblue;
+    border-radius: .5em;
+    padding: .5em;
+}
+
+.task.task-done {
+    background-color: gainsboro;
+}
+
+.task > * + * {
+    margin-left: .5em;
+}
+
+.task .task-info {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+}
+
+.task .task-info > * + * {
+    margin-top: .5em;
+}
+
+.task .task-info .task-info-name {
+    font-size: 1.2em;
+    color: darkslateblue;
+    font-weight: bold;
+}
+
+.task.task-done .task-info .task-info-name {
+    color: darkgreen;
+}
+
+.task .task-info .task-info-comment {
+    color: darkslategray;
+}
+
+.task .task-info .task-info-status {
+    color: darkblue;
+}
+
+.task .task-info .task-info-status:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.task .task-info .task-info-status:active {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.task .task-info .task-info-status-done {
+    color: green;
+    font-weight: bold;
+}
+
+.task .task-control {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
